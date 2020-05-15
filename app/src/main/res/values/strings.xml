@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EnjoyReading</string>
+    <string name="home_meun">หน้าแรก</string>
+    <string name="library_meun">คลัง</string>
+    <string name="profile_meun">ฉัน</string>
+    <string name="bookshelf_meun">หนังสือ</string>
+
+    <string name="account_toolber">บัญชีผู้ใช้</string>
+    <string name="home_toolber">หน้าหลัก</string>
+    <string name="library_toolber">ห้องสมุด</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
