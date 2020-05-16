@@ -19,6 +19,12 @@
             app:title="@string/home_meun"
             android:background="@color/colorPrimary"/>
 
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/bookRecycler"
+                android:layout_height="match_parent" />
+
     </LinearLayout>
 
 </FrameLayout>

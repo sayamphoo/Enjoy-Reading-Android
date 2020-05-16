@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sayamphoo.enjoyreading.ItemClickListener
 import com.sayamphoo.enjoyreading.R
-import com.sayamphoo.enjoyreading.adapter.MeRecAdapter
+import com.sayamphoo.enjoyreading.adapter.me.MeRecAdapter
 import com.sayamphoo.enjoyreading.model.*
 import kotlinx.android.synthetic.main.fragment_me.*
 
@@ -26,7 +26,7 @@ class MeFragment : Fragment(), ItemClickListener {
         super.onActivityCreated(savedInstanceState)
 
         val mMenuName = arrayListOf(
-            "การตั้งงค่า",
+            "การตั้งค่า",
             "เกียวกับ",
             "ออกจากระบบ"
         )
@@ -50,7 +50,8 @@ class MeFragment : Fragment(), ItemClickListener {
 
 
         meRecycler.layoutManager = LinearLayoutManager(activity)
-        meRecycler.adapter = MeRecAdapter(items)
+        meRecycler.adapter =
+            MeRecAdapter(items)
     }
 
     override fun onNoteClick(position: Int) {
