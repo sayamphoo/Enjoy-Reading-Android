@@ -19,8 +19,6 @@ class ContentActivity : AppCompatActivity() {
 
         bottom_Nav.setOnNavigationItemSelectedListener(bottomNavListener)
 
-        Log.d("00011111",savedInstanceState.toString())
-
         if (savedInstanceState == null) {
             setFragment(HomeFragment())
         }

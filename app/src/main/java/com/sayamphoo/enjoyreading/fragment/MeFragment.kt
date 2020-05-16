@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sayamphoo.enjoyreading.ItemClickListener
 import com.sayamphoo.enjoyreading.R
 import com.sayamphoo.enjoyreading.adapter.me.MeRecAdapter
 import com.sayamphoo.enjoyreading.model.*
