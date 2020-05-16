@@ -13,7 +13,7 @@ class HolderMenu(item: View) : RecyclerView.ViewHolder(item) {
 
     init {
         item.setOnClickListener {
-            Toast.makeText(item.context,"--++ ", Toast.LENGTH_LONG).show()
+            Toast.makeText(item.context,"--++ $item", Toast.LENGTH_LONG).show()
         }
     }
 }

@@ -12,7 +12,7 @@ import com.sayamphoo.enjoyreading.adapter.me.MeRecAdapter
 import com.sayamphoo.enjoyreading.model.*
 import kotlinx.android.synthetic.main.fragment_me.*
 
-class MeFragment : Fragment(), ItemClickListener {
+class MeFragment : Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,17 +45,9 @@ class MeFragment : Fragment(), ItemClickListener {
             items.add(MeItem(2, menu = Menu(mMenuName[i], mMenuIcon[i])))
         }
 
-
-
-
         meRecycler.layoutManager = LinearLayoutManager(activity)
         meRecycler.adapter =
             MeRecAdapter(items)
     }
-
-    override fun onNoteClick(position: Int) {
-        Toast.makeText(context, "000", Toast.LENGTH_LONG).show()
-    }
-
 
 }
