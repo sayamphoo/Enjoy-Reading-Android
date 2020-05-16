@@ -6,9 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sayamphoo.enjoyreading.R
 import com.sayamphoo.enjoyreading.model.MeItem
 
-class MeRecAdapter(
-    private val item: ArrayList<MeItem>
-) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MeRecAdapter(private val item: ArrayList<MeItem>) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return item[position].type!!
@@ -41,8 +40,12 @@ class MeRecAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder.itemViewType) {
-            0 -> { holder as HolderProfile }
-            1 -> {holder as HolderCoin}
+            0 -> {
+                holder as HolderProfile
+            }
+            1 -> {
+                holder as HolderCoin
+            }
             else -> {
                 holder as HolderMenu
                 holder.name.text = item[position].menu.nameList
