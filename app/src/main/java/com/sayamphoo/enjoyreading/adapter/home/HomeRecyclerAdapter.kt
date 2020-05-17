@@ -11,7 +11,7 @@ class HomeRecyclerAdapter(val item: ArrayList<HomeDataViewItem>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_header_home, parent, false)
-        return HolderHeader(view)
+        return HolderRecyclerHeader(view)
     }
 
     override fun getItemCount(): Int {
@@ -19,8 +19,8 @@ class HomeRecyclerAdapter(val item: ArrayList<HomeDataViewItem>) :
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        holder as HolderHeader
-        holder.viewPager.adapter = HomeViewPagerAdapter(item[0].view!!.list)
+        holder as HolderRecyclerHeader
+        holder.mViewPager.adapter = HomeViewPagerAdapter(item[0].view!!.list)
     }
 
 }

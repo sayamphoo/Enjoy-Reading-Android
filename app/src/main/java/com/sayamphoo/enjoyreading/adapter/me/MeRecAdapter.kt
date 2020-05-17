@@ -48,8 +48,8 @@ class MeRecAdapter(private val dataViewItem: ArrayList<MeDataViewItem>) :
             }
             else -> {
                 holder as HolderMenu
-                holder.name.text = dataViewItem[position].menu.nameList
-                holder.icon.setImageResource(dataViewItem[position].menu.iconList!!)
+                holder.mName.text = dataViewItem[position].menu.nameList
+                holder.mIcon.setImageResource(dataViewItem[position].menu.iconList!!)
 
             }
         }

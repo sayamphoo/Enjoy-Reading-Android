@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sayamphoo.enjoyreading.R
 
 class HolderMenu(item: View) : RecyclerView.ViewHolder(item) {
-    val name = item.findViewById<TextView>(R.id.name)
-    val icon = item.findViewById<ImageView>(R.id.iconMenu)
+    val mName: TextView = item.findViewById(R.id.name)
+    val mIcon: ImageView = item.findViewById(R.id.iconMenu)
 
     init {
         item.setOnClickListener {

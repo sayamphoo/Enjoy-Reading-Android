@@ -5,6 +5,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.sayamphoo.enjoyreading.R
 
-class HolderHeader(itemView:View):RecyclerView.ViewHolder(itemView){
-    val viewPager = itemView.findViewById<ViewPager2>(R.id.Ddee)
+class HolderRecyclerHeader(itemView:View):RecyclerView.ViewHolder(itemView){
+    val mViewPager: ViewPager2 = itemView.findViewById(R.id.Ddee)
 }
