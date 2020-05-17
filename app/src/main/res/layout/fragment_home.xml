@@ -7,6 +7,7 @@
     tools:context=".fragment.HomeFragment">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="UselessParent">
@@ -22,7 +23,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:id="@+id/bookRecycler"
+                android:id="@+id/homeRecycler"
                 android:layout_height="match_parent" />
 
     </LinearLayout>

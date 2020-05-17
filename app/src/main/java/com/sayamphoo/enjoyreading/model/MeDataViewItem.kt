@@ -1,7 +1,7 @@
 package com.sayamphoo.enjoyreading.model
 
 
-data class MeItem(
+data class MeDataViewItem(
     val type: Int?,
     val profile: Profile = Profile(),
     val coins: Coins = Coins(),

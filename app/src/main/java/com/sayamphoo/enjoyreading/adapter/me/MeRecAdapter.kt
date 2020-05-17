@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.sayamphoo.enjoyreading.R
-import com.sayamphoo.enjoyreading.model.MeItem
+import com.sayamphoo.enjoyreading.model.MeDataViewItem
 
-class MeRecAdapter(private val item: ArrayList<MeItem>) :
+class MeRecAdapter(private val dataViewItem: ArrayList<MeDataViewItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
-        return item[position].type!!
+        return dataViewItem[position].type!!
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -35,7 +35,7 @@ class MeRecAdapter(private val item: ArrayList<MeItem>) :
     }
 
     override fun getItemCount(): Int {
-        return item.size
+        return dataViewItem.size
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -48,8 +48,8 @@ class MeRecAdapter(private val item: ArrayList<MeItem>) :
             }
             else -> {
                 holder as HolderMenu
-                holder.name.text = item[position].menu.nameList
-                holder.icon.setImageResource(item[position].menu.iconList!!)
+                holder.name.text = dataViewItem[position].menu.nameList
+                holder.icon.setImageResource(dataViewItem[position].menu.iconList!!)
 
             }
         }

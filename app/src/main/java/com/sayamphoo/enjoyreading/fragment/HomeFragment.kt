@@ -2,30 +2,37 @@ package com.sayamphoo.enjoyreading.fragment
 
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.sayamphoo.enjoyreading.R
+import com.sayamphoo.enjoyreading.adapter.home.HomeRecyclerAdapter
+import com.sayamphoo.enjoyreading.model.HomeDataViewItem
+import com.sayamphoo.enjoyreading.model.ViewPagers
+import kotlinx.android.synthetic.main.fragment_home.*
+
 class HomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
-        val toolbar = view.findViewById<Toolbar>(R.id.toolbar_home)
-
-        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
-        setHasOptionsMenu(true);
-
-        return view
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.home_menu,menu)
-        super.onCreateOptionsMenu(menu, inflater)
+        val item = ArrayList<HomeDataViewItem>()
+
+        val data = arrayListOf(
+            R.drawable.ic_account,
+            R.drawable.ic_logout
+        )
+
+        item.add(HomeDataViewItem(0, view = ViewPagers(data)))
+
+        homeRecycler.layoutManager = LinearLayoutManager(activity)
+        homeRecycler.adapter = HomeRecyclerAdapter(item)
     }
-
-
 }
+
