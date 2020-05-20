@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sayamphoo.enjoyreading.R
 import com.sayamphoo.enjoyreading.adapter.home.HomeRecyclerAdapter
 import com.sayamphoo.enjoyreading.model.HomeDataViewItem
-import com.sayamphoo.enjoyreading.model.ViewPagers
+import com.sayamphoo.enjoyreading.model.ViewPagersList
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -29,7 +29,9 @@ class HomeFragment : Fragment() {
             R.drawable.ic_logout
         )
 
-        item.add(HomeDataViewItem(0, view = ViewPagers(data)))
+        item.add(HomeDataViewItem(0, VPList = ViewPagersList(data)))
+        item.add(HomeDataViewItem(1))
+
 
         homeRecycler.layoutManager = LinearLayoutManager(activity)
         homeRecycler.adapter = HomeRecyclerAdapter(item)

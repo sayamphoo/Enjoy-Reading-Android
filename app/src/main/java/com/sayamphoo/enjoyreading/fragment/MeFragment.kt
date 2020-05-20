@@ -44,7 +44,7 @@ class MeFragment : Fragment(){
             items.add(MeDataViewItem(2, menu = Menu(mMenuName[i], mMenuIcon[i])))
         }
 
-        meRecycler.layoutManager = LinearLayoutManager(activity)
+        meRecycler.layoutManager = LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,false)
         meRecycler.adapter = MeRecAdapter(items)
     }
 

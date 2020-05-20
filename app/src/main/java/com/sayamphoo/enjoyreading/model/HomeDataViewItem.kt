@@ -2,9 +2,14 @@ package com.sayamphoo.enjoyreading.model
 
 data class HomeDataViewItem (
     val type:Int? = 0,
-    val view:ViewPagers?
+    val VPList:ViewPagersList? = ViewPagersList(),
+    val RVList:RecyclerList? = RecyclerList()
 )
 
-data class ViewPagers(
-    val list: ArrayList<Int>
+data class ViewPagersList(
+    val list: ArrayList<Int> = ArrayList()
+)
+
+data class RecyclerList(
+    val list: ArrayList<Int> = ArrayList()
 )
