@@ -40,8 +40,12 @@ class HomeFragment : Fragment() {
             VPList.add(ViewPagersList(i))
         }
 
-        mutableList.add(HomeDataViewItem(0, VPList = VPList))
-        mutableList.add(HomeDataViewItem(1))
+        repeat(5){
+            mutableList.add(HomeDataViewItem(0, VPList = VPList))
+            mutableList.add(HomeDataViewItem(1))
+            mutableList.add(HomeDataViewItem(1))
+            mutableList.add(HomeDataViewItem(1))
+        }
 
 
         return mutableList

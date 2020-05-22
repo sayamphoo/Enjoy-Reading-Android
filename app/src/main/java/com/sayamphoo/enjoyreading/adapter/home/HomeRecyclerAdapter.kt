@@ -1,6 +1,5 @@
 package com.sayamphoo.enjoyreading.adapter.home
 
-import android.graphics.Picture
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sayamphoo.enjoyreading.R
 import com.sayamphoo.enjoyreading.model.HomeDataViewItem
-import com.squareup.picasso.Picasso
 
 class HomeRecyclerAdapter(private val itemData: List<HomeDataViewItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -53,8 +51,11 @@ class HomeRecyclerAdapter(private val itemData: List<HomeDataViewItem>) :
             1 -> {
                 holder as HolderRecyclerList
 
-                holder.listRecycler.layoutManager = LinearLayoutManager(holder.itemView.context,LinearLayoutManager.HORIZONTAL ,false)
-                holder.listRecycler.adapter = HomeRecycleAdapterRecycle()
+                holder.listRecycler.apply {
+                    layoutManager = LinearLayoutManager(holder.itemView.context,
+                        LinearLayoutManager.HORIZONTAL, false)
+                    holder.listRecycler.adapter = HomeRecycleAdapterRecycle()
+                }
             }
             else -> {
                 holder as HolderRecymclerHeader

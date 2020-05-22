@@ -20,7 +20,6 @@
             app:title="@string/home_meun"
             android:background="@color/colorPrimary"/>
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/homeRecycler"
