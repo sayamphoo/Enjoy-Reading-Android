@@ -7,7 +7,7 @@ import com.sayamphoo.enjoyreading.R
 
 class HomeRecycleAdapterRecycle () :RecyclerView.Adapter<RecyclerView.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_home,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_home_infor,parent,false)
         return HolderRecycleInRecycleView(view)
     }
 

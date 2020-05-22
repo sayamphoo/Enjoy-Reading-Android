@@ -1,5 +1,6 @@
 package com.sayamphoo.enjoyreading.adapter.home
 
+import android.graphics.Picture
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sayamphoo.enjoyreading.R
 import com.sayamphoo.enjoyreading.model.HomeDataViewItem
+import com.squareup.picasso.Picasso
 
-class HomeRecyclerAdapter(private val itemData: ArrayList<HomeDataViewItem>) :
+class HomeRecyclerAdapter(private val itemData: List<HomeDataViewItem>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
@@ -46,12 +48,12 @@ class HomeRecyclerAdapter(private val itemData: ArrayList<HomeDataViewItem>) :
         when (holder.itemViewType) {
             0 -> {
                 holder as HolderRecyclerHeader
-                holder.mViewPager.adapter = HomeViewPagerAdapter(itemData[position].VPList!!.list)
+                holder.mViewPager.adapter = HomeViewPagerAdapter(itemData[position].VPList!!)
             }
             1 -> {
                 holder as HolderRecyclerList
-                holder.listRecycler.layoutManager = LinearLayoutManager(holder.itemView.context,LinearLayoutManager.HORIZONTAL ,false
-                )
+
+                holder.listRecycler.layoutManager = LinearLayoutManager(holder.itemView.context,LinearLayoutManager.HORIZONTAL ,false)
                 holder.listRecycler.adapter = HomeRecycleAdapterRecycle()
             }
             else -> {

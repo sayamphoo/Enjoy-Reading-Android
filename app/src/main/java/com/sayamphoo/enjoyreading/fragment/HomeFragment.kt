@@ -22,19 +22,29 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val item = ArrayList<HomeDataViewItem>()
+        homeRecycler.layoutManager = LinearLayoutManager(activity)
+        homeRecycler.adapter = HomeRecyclerAdapter(testData())
 
-        val data = arrayListOf(
+    }
+
+    private fun testData(): List<HomeDataViewItem> {
+        val titles = listOf(
             R.drawable.ic_account,
             R.drawable.ic_logout
         )
+        val mutableList = mutableListOf<HomeDataViewItem>()
 
-        item.add(HomeDataViewItem(0, VPList = ViewPagersList(data)))
-        item.add(HomeDataViewItem(1))
+        val VPList = mutableListOf<ViewPagersList>()
+
+        for (i in titles) {
+            VPList.add(ViewPagersList(i))
+        }
+
+        mutableList.add(HomeDataViewItem(0, VPList = VPList))
+        mutableList.add(HomeDataViewItem(1))
 
 
-        homeRecycler.layoutManager = LinearLayoutManager(activity)
-        homeRecycler.adapter = HomeRecyclerAdapter(item)
+        return mutableList
     }
 }
 

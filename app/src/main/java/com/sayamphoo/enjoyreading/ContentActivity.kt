@@ -30,15 +30,18 @@ class ContentActivity : AppCompatActivity() {
                 setFragment(HomeFragment())
                 return@OnNavigationItemSelectedListener true
             }
+
+            R.id.books -> {
+                setFragment(BooksFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+
             R.id.library -> {
                 setFragment(LibraryFragment())
                 return@OnNavigationItemSelectedListener true
             }
 
-            R.id.books -> {
-            setFragment(BooksFragment())
-            return@OnNavigationItemSelectedListener true
-        }
+
             R.id.me -> {
                 setFragment(MeFragment())
                 return@OnNavigationItemSelectedListener true
@@ -47,7 +50,7 @@ class ContentActivity : AppCompatActivity() {
         false
     }
 
-    private fun setFragment(fragment:Fragment){
+    private fun setFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.frame_Layout, fragment)
             .commit()

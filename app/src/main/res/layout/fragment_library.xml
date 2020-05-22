@@ -16,7 +16,7 @@
             android:layout_height="?actionBarSize"
             android:background="#fff"
             android:theme="@style/ToolbarTheme"
-            app:title="@string/account_toolber" />
+            app:title="หนังสือ" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/bookRecycler"
