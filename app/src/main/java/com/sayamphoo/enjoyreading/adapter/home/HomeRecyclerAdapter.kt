@@ -20,7 +20,7 @@ class HomeRecyclerAdapter(private val itemData: List<HomeDataViewItem>) :
             0 -> {
                 val view =
                     LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_header_home, parent, false)
+                        .inflate(R.layout.item_ads, parent, false)
                 return HolderRecyclerHeader(view)
             }
             1 -> {

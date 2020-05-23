@@ -12,13 +12,69 @@
         android:layout_height="match_parent"
         tools:ignore="UselessParent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_home"
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:theme="@style/ToolbarTheme"
-            app:title="@string/home_meun"
-            android:background="@color/colorPrimary"/>
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@color/colorPrimary"
+            android:layout_height="?actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorApp"
+                    android:textSize="20dp"
+                    android:text="หน้าหลัก"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="end|center"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:background="@drawable/bg_serch_butt_shape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginStart="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Search" />
+
+                        <ImageView
+                            android:layout_marginEnd="5dp"
+                            android:tint="#5C5C5C"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_search" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
