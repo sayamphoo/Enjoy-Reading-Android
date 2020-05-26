@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="1dp"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="0dp"
+    android:foreground="?android:selectableItemBackground"
     android:layout_margin="6dp"
-    android:orientation="vertical">
+    android:clickable="true"
+    android:orientation="vertical"
+    android:focusable="true">
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,20 +18,64 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="135dp"
-            android:background="@color/colorAccent"
-            android:layout_height="170dp"/>
+            android:layout_width="140dp"
+            android:id="@+id/imagelist"
+            android:scaleType="centerCrop"
+           android:src="@color/colorApp"
+            android:layout_height="180dp"/>
 
-        <TextView
-            android:layout_width="135dp"
-            android:layout_height="40dp"
-            android:gravity="center_vertical"
-            android:paddingStart="5dp"
-            android:text="ฟ้าหลังฝน"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:background="#CFCFCF"
-            android:textColor="#000"/>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="คดีฆ่าหั่นศพ"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Sayamphoo"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:tint="@color/colorApp"
+                    android:src="@drawable/ic_remove_red_eye"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorApp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="12.9K"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 

@@ -1,10 +1,12 @@
 package com.sayamphoo.enjoyreading.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sayamphoo.enjoyreading.R
+import com.sayamphoo.enjoyreading.SearchActivity
 import com.sayamphoo.enjoyreading.adapter.home.HomeRecyclerAdapter
 import com.sayamphoo.enjoyreading.model.HomeDataViewItem
 import com.sayamphoo.enjoyreading.model.ViewPagersList
@@ -25,6 +27,9 @@ class HomeFragment : Fragment() {
         homeRecycler.layoutManager = LinearLayoutManager(activity)
         homeRecycler.adapter = HomeRecyclerAdapter(testData())
 
+        buttSearch.setOnClickListener {
+            startActivity(Intent(activity,SearchActivity::class.java))
+        }
     }
 
     private fun testData(): List<HomeDataViewItem> {

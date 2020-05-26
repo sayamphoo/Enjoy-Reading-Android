@@ -7,7 +7,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.sayamphoo.enjoyreading.enum.TabbarListEnum
 import com.sayamphoo.enjoyreading.fragment.book.*
 
-
 class ViewPagerAdapter(
     private val fragmentManager: FragmentManager,
     private val lifecycle: Lifecycle

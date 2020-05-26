@@ -7,25 +7,10 @@
     android:background="@null"
     tools:context=".fragment.MeFragment">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:background="#fff"
-            android:theme="@style/ToolbarTheme"
-            app:title="@string/account_toolber" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:id="@+id/meRecycler"
-            android:clickable="true"
-            android:background="@null"
-            android:layout_height="match_parent"
-            android:focusable="true" />
-    </LinearLayout>
+        android:background="@null"/>
 
 </FrameLayout>
