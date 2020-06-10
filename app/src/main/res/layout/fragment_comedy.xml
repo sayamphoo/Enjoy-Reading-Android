@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.book.ComedyFragment">
+    tools:context=".ui.frament.book.ui.fragment.comedy.ComedyFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

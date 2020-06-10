@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.book.AllFragment">
+    tools:context=".ui.frament.book.ui.fragment.all.AllFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -11,6 +11,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
+            android:id="@+id/bookListAll"
             android:layout_height="match_parent"/>
 
     </androidx.core.widget.NestedScrollView>
